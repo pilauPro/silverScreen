@@ -23,21 +23,13 @@
     <%= f.label :year %><br>
     <%= f.number_field :year %>
   </div>
-  <div class="field">
-    <%= f.label :image_file_name %><br>
-    <%= f.text_field :image_file_name %>
-  </div>
-  <div class="field">
-    <%= f.label :image_content_type %><br>
-    <%= f.text_field :image_content_type %>
-  </div>
-  <div class="field">
-    <%= f.label :image_file_size %><br>
-    <%= f.number_field :image_file_size %>
-  </div>
-  <div class="field">
-    <%= f.label :image_updated_at %><br>
-    <%= f.datetime_select :image_updated_at %>
+
+  <% if @movie.image.exists? %>
+      <%= image_tag @movie.image.url %><br />
+  <% end %>
+  <div class="field">  
+    <%= f.label :image, "Attach a New Image" %><br />
+    <%= f.file_field :image %>
   </div>
   <div class="actions">
     <%= f.submit %>
