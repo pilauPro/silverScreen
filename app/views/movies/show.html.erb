@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @movie.title %>
+</p>
+
+<p>
+  <strong>Tagline:</strong>
+  <%= @movie.tagline %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @movie.year %>
+</p>
+
+<p>
+  <strong>Image file name:</strong>
+  <%= @movie.image_file_name %>
+</p>
+
+<p>
+  <strong>Image content type:</strong>
+  <%= @movie.image_content_type %>
+</p>
+
+<p>
+  <strong>Image file size:</strong>
+  <%= @movie.image_file_size %>
+</p>
+
+<p>
+  <strong>Image updated at:</strong>
+  <%= @movie.image_updated_at %>
+</p>
+
+<%= link_to 'Edit', edit_movie_path(@movie) %> |
+<%= link_to 'Back', movies_path %>
