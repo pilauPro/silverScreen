@@ -16,11 +16,11 @@
   </div>
   <div class="field">
     <%= f.label "Select movie" %><br>
-    <%= f.collection_select(:movie_id, Movie.all, :id, :title) %>
+    <%= f.collection_select(:movie_id, Movie.order('title ASC').all, :id, :title) %>
   </div>
   <div class="field">
     <%= f.label "Select actor" %><br>
-    <%= f.collection_select(:actor_id, Actor.all, :id, :lname) %>
+    <%= f.collection_select(:actor_id, Actor.order('lname ASC').all, :id, :full_name) %>
   </div>
   <div class="actions">
     <%= f.submit %>
