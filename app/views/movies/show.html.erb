@@ -1,22 +1,26 @@
 <p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @movie.title %>
-</p>
+  <h1><%= @movie.title %></h1>
+  <h2 class="year"><%= @movie.year %></h2>
 <% if @movie.image.exists? %>
   <%= image_tag @movie.image.url %><br />
 <% end %>
-<p>
-  <strong>Tagline:</strong>
-  <%= @movie.tagline %>
-</p>
-
-<p>
-  <strong>Year:</strong>
-  <%= @movie.year %>
-</p>
-
+<h2><%= @movie.tagline %></h2>
+<table>
+  <thead>
+    <tr>
+      <th>Role</th>
+      <th>Actor</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @movie.roles.order('name ASC').each do |role| %>
+      <tr>
+        <td><%= role.name %></td>
+        <td><%= role.actor.first_name_first %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
 
 
 <%= link_to 'Edit', edit_movie_path(@movie) %> |

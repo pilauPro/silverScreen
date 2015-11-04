@@ -5,17 +5,15 @@
 <table>
   <thead>
     <tr>
-      <th>Fname</th>
-      <th>Lname</th>
+      <th>Name</th>
       <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
-    <% @actors.each do |actor| %>
+    <% @actors.order("lname ASC").each do |actor| %>
       <tr>
-        <td><%= actor.fname %></td>
-        <td><%= actor.lname %></td>
+        <td><%= actor.last_name_first %></td>
         <td><%= link_to 'Show', actor %></td>
         <td><%= link_to 'Edit', edit_actor_path(actor) %></td>
         <td><%= link_to 'Destroy', actor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
