@@ -2,6 +2,9 @@ h1{
   font-family: arial;
   font-size: 40px;
 }
+.indent{
+	margin-left: 30px;
+}
 .year{
   color: blue;
 }
@@ -9,4 +12,7 @@ h1{
 	padding-top: 1px;
 	padding-bottom: 1px;
 	background-color: lightblue;
+}
+#heading{
+	border-bottom: 1px solid black;
 }

@@ -1,8 +1,10 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Actors</h1>
+<div class="jumbotron">
+  <h1>Actors</h1>
+</div>
 
-<table>
+<table class="table table-bordered indent">
   <thead>
     <tr>
       <th>Name</th>
@@ -24,4 +26,6 @@
 
 <br>
 
-<%= link_to 'New Actor', new_actor_path %>
+<div class="indent">
+  <%= link_to 'New Actor', new_actor_path %>
+</div>
