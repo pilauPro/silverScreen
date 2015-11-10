@@ -22,6 +22,10 @@
     <%= f.label "Select actor" %><br>
     <%= f.collection_select(:actor_id, Actor.order('lname ASC').all, :id, :last_name_first) %>
   </div>
+    <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>
